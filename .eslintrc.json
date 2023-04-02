@@ -1,3 +1,11 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // This rule prevents the use of unescaped HTML entities in JSX
+    // It ensures that all special characters in plain text are correctly escaped and do not cause any issues when rendering the content.
+    "react/no-unescaped-entities": "off",
+    //  This rule prevents the use of custom fonts on Next.js pages, which can negatively impact performance
+    // By using a consistent set of fonts across the entire site or application, the browser can cache the font files, resulting in faster load times and better overall performance.
+    "@next/next/no-page-custom-font": "off"
+  }
 }
